@@ -21,16 +21,16 @@
 <div class="row">
     <div class="col-md-2">
         <ul class="nav nav-pills nav-stacked">
-            <li><a href="#">Heure</a></li>
-            <li><a href="#">Météo</a></li>
-            <li><a href="#">Photo</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Youtube</a></li>
-            <li><a href="#">Google Maps</a></li>
-            <li><a href="#">Football</a></li>
+            <li><a href="#" onclick="addPanelHour()">Heure</a></li>
+            <li><a href="#" onclick="addPanel('Météo');">Météo</a></li>
+            <li><a href="#" onclick="addPanel('Photo');">Photo</a></li>
+            <li><a href="#" onclick="addPanel('Twitter');">Twitter</a></li>
+            <li><a href="#" onclick="addPanel('Youtube');">Youtube</a></li>
+            <li><a href="#" onclick="addPanel('Google Maps');">Google Maps</a></li>
+            <li><a href="#" onclick="addPanel('Football');">Football</a></li>
         </ul>
     </div>
-    <div class="col-md-10">
+    <div class="col-md-10" id="panel">
 
     </div>
 </div>
