@@ -21,22 +21,32 @@
 <div class="row">
     <div class="col-md-2">
         <ul class="nav nav-pills nav-stacked">
-            <li><a href="#" onclick="addPanelHour()">Heure</a></li>
-            <li><a href="#" onclick="addPanel('Météo');">Météo</a></li>
+            <li><a href="#" onclick="addHourPanel()">Heure</a></li>
+            <li><a href="#" onclick="addWeatherPanel();">Météo</a></li>
             <li><a href="#" onclick="addPanel('Photo');">Photo</a></li>
-            <li><a href="#" onclick="addPanel('Twitter');">Twitter</a></li>
-            <li><a href="#" onclick="addPanel('Youtube');">Youtube</a></li>
+            <li><a href="#" onclick="addTwitterPanel();">Twitter</a></li>
+            <li><a href="#" onclick="addYoutubePanel();">Youtube</a></li>
             <li><a href="#" onclick="addPanel('Google Maps');">Google Maps</a></li>
             <li><a href="#" onclick="addPanel('Football');">Football</a></li>
         </ul>
     </div>
-    <div class="col-md-10" id="panel">
+    <div class="col-md-10" id="panels">
+
+        <div class="alert alert-danger" style="display: none;" id="error">
+
+        </div>
 
     </div>
 </div>
 
+<div id="googleMap" style="width:500px;height:380px;"></div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="app.js"></script>
+<script src="hourPanel.js"></script>
+<script src="weatherPanel.js"></script>
+<script src="twitterPanel.js"></script>
+<script src="youtubePanel.js"></script>
 </body>
 </html>
