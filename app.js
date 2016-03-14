@@ -16,11 +16,16 @@ function addPanel(title, id) {
 }
 
 function addPanelHour() {
-    addPanel('Heure', 'hour');
 
-    setInterval(function () {
-        getTime()
-    }, 1000);
+    if(!isPanelExist('hour'))
+    {
+        addPanel('Heure', 'hour');
+
+        setInterval(function () {
+            getTime()
+        }, 1000);
+    }
+
 }
 
 function getTime() {
@@ -29,4 +34,8 @@ function getTime() {
     $('#hour').empty().append(
         $('<p class="text-center" style="font-size: 20px;">' + time + '</p>')
     );
+}
+
+function isPanelExist(id) {
+    return $("#" + id).length > 0;
 }
