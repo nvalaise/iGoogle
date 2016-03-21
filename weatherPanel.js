@@ -3,7 +3,7 @@
  */
 function addWeatherPanel() {
 
-    countryName = "";
+    cityName = "";
 
     if (!isPanelExist('panel-weather')) {
         if (selectCountry()) {
@@ -33,7 +33,7 @@ function selectCountry() {
         $('#error').empty().append('Le nom de la ville est nul !').show(500).delay(2000).fadeOut(500);
     }
     else {
-        countryName = result;
+        cityName = result;
     }
 
     return showPanel;
@@ -41,7 +41,7 @@ function selectCountry() {
 
 function setWeatherToPanel() {
 
-    $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=" + countryName + "&APPID=74b3587528fb768c7fcc1174c5851f44&units=metric").done(function (result) {
+    $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&APPID=74b3587528fb768c7fcc1174c5851f44&units=metric").done(function (result) {
         $('#weather').empty().append(
             $('<p class="text-center" style="font-size: 20px;">' + result.main.temp + "°C" + '</p>')
                 .append('<p class="text-center" style="font-size: 20px;">' + result.main.humidity + " % d'humidité" + '</p>')
