@@ -5,7 +5,7 @@
 function addPanel(title, id) {
     $('#panels')
         .append(
-            $('<div class="col-md-3" id="panel-' + id + '"></div>').append(
+            $('<div class="col-md-6" id="panel-' + id + '"></div>').append(
                 $('<div class="panel panel-info"></div>')
                     .append(
                         $('<div class="panel-heading"></div>')
