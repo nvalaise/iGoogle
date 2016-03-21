@@ -18,9 +18,12 @@ function addPanel(title, id) {
                     .append(
                         $('<div class="panel-body" id="' + id + '"></div>')
                     )
-            )
-        ).hide()
-        .show(500);
+                )
+                .animate({
+                    width: "50%"
+                }, 500, function () {
+                })
+        );
 
 }
 
