@@ -5,7 +5,7 @@ function addPhotoPanel() {
 
     videoSubject = "";
 
-    if (!isPanelExist('panel-Photo')) {
+    if (!isPanelExist('panel-photo')) {
         if (selectPhotoSubject()) {
             addPanel('Photo', 'photo');
             setPhotoToPanel();
