@@ -24,9 +24,6 @@ function setSportToPanel() {
         dataType: 'json',
         type: 'GET'
     }).done(function (response) {
-        alert(response.crestUrl);
-
-
         $('#sport').empty().append(
             $('<p class="text-center" style="font-size: 20px;">' + response.name + '</p>')
                 .append('<p class="text-center" style="font-size: 15px;">' + "(" + response.code + ") " + response.shortName + '</p>')

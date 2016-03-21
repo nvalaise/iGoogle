@@ -56,9 +56,7 @@ function jsonFlickrApi(rsp) {
     var total = rsp.photos.perpage;
     var rang_aleat = Math.floor(Math.random() * total);
     var photo = rsp.photos.photo[rang_aleat];
-
-    alert("Total = " + total + " selectionné = " + rang_aleat);
-
+    
     if(rsp.stat == "ok") {
 
         var image = "https://farm" + photo.farm +
