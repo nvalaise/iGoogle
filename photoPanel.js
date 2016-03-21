@@ -5,7 +5,7 @@ function addPhotoPanel() {
 
     videoSubject = "";
 
-    if (!isPanelExist('panel-Photo')) {
+    if (!isPanelExist('panel-photo')) {
         if (selectPhotoSubject()) {
             addPanel('Photo', 'photo');
             setPhotoToPanel();
@@ -70,6 +70,5 @@ function jsonFlickrApi(rsp) {
         $('#photo').empty().append(
             $("<img src='"+ image + "' style='width: 100%'>")
         );
-
     }
 }
