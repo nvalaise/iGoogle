@@ -71,5 +71,6 @@ function jsonFlickrApi(rsp) {
         $('#photo').empty().append(
             $("<img src='"+ image + "' style='width: 100%'>")
         );
+
     }
 }
