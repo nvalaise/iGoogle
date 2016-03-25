@@ -43,6 +43,9 @@ function setPhotoToPanel() {
 
     var image_url = "https://api.flickr.com/services/rest/?&method=flickr.photos.search&api_key=4d980d6e23311c22834a53a240ee0b18&format=json&tags=" + videoSubject;
 
+    $('#photo').empty().append("<p>Chargement en cours ...</p>");
+
+
     $.ajax({
         url: image_url
     }).done(function (result) {

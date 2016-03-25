@@ -41,7 +41,7 @@ function selectVideoSubject() {
 
 function setVideoToPanel() {
     $('#youtube').empty().append(
-        $('<iframe id="ytplayer" type="text/html" width="100%"' +
+        $('<iframe id="ytplayer" type="text/html" width="100%" height="100%"' +
             ' src="http://www.youtube.com/embed?listType=search&list=' + videoSubject + '" frameborder="0" />')
     );
 }

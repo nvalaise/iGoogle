@@ -16,7 +16,7 @@ function addPanel(title, id) {
                             )
                             .append('<h4 class="text-center">' + title + '</h4>'))
                     .append(
-                        $('<div class="panel-body" id="' + id + '"></div>')
+                        $('<div class="panel-body" id="' + id + '" style="height: 300px"></div>')
                     )
             )
         ).hide()

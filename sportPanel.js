@@ -12,15 +12,21 @@ function addSportPanel() {
         var photoPanel = $('#panel-sport');
         if (photoPanel.css('display') == 'none') {
             photoPanel.show(500);
+
+            // met à jour l'équipe
+            setSportToPanel();
         }
     }
 }
 
 function setSportToPanel() {
 
+    // en principe, on est sur d'avoir un résultat entre 1 et 40
+    var random = Math.floor(Math.random() * 40);
+
     $.ajax({
         headers: {'X-Auth-Token': '0ce61301551b4d8bb8d8bb6621bd7af4'},
-        url: 'http://api.football-data.org/v1/teams/4',
+        url: 'http://api.football-data.org/v1/teams/'+random,
         dataType: 'json',
         type: 'GET'
     }).done(function (response) {
